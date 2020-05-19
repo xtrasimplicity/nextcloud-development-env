@@ -2,4 +2,7 @@
 _Simple docker-based environment for NextCloud development._
 
 ## Usage
-**_Coming soon..._**
+1. Update the `DEV_USER_GID` build argument in `docker-compose.yml` to reflect your current user ID (as per `id -u` on Linux).
+2. Run `docker-compose build --pull` to build the container using the latest NextCloud 18 base.
+3. Run `docker-compose up` to start your development server.
+4. Start developing!

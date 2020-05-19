@@ -13,7 +13,10 @@
           MYSQL_PASSWORD: ${MYSQL_PASSWORD:-password}
   
       nextcloud:
-        image: nextcloud:18-apache
+        build:
+          context: .
+          args:
+            DEV_USER_GID: 1000
         depends_on:
           - db
         ports:
